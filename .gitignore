@@ -144,6 +144,10 @@ ENV/
 env.bak/
 venv.bak/
 
+# src
+src/books.csv
+src/users.json
+
 # Spyder project settings
 .spyderproject
 .spyproject

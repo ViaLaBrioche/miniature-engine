@@ -1,6 +1,3 @@
-from curses.textpad import rectangle
-
-from src.figure import Figure
 from src.triangle import Triangle
 from src.circle import Circle
 from src.rectangle import Rectangle
@@ -67,19 +64,18 @@ def test_rectangle_add_area_figures(figure, sum_area):
     r = Rectangle(4, 6)
     assert r.add_area(figure) == sum_area
 
+
 @pytest.mark.parametrize(
-    'value',
+    "value",
     [
         pytest.param(30, id="integer"),
         pytest.param(34.567, id="float"),
-        pytest.param('string', id="string"),
-        pytest.param((1, 'test'), id="tuple"),
-        pytest.param([1, 4, 'test'], id="list"),
-        pytest.param({"num": 12, "str": "string"}, id="obj")
-
-    ]
+        pytest.param("string", id="string"),
+        pytest.param((1, "test"), id="tuple"),
+        pytest.param([1, 4, "test"], id="list"),
+        pytest.param({"num": 12, "str": "string"}, id="obj"),
+    ],
 )
-
 def test_figure_invalid(value):
     square = Square(4)
     with pytest.raises(ValueError, match="Argument must be figure"):
