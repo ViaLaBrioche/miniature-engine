@@ -1,5 +1,6 @@
-from figure import Figure
+from src.figure import Figure
 import math
+
 
 class Circle(Figure):
     def __init__(self, circle_r: int | float):
@@ -9,8 +10,8 @@ class Circle(Figure):
 
     @property
     def area(self):
-        return math.pi * self.circle_r**2
+        return round(math.pi * self.circle_r**2, 2)
 
     @property
     def perimeter(self):
-        return 2 * (math.pi * self.circle_r)
+        return round(2 * (math.pi * self.circle_r), 2)
