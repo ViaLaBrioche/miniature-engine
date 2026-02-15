@@ -45,4 +45,4 @@ for user in result_list_users:
         i += 1
 
 with open("result.json", "w") as f:
-    json.dump(result_list_users, f)
+    json.dump(result_list_users, f, indent=4)
